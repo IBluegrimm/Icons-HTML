@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Allgemeine Fakten über Icons in HTML</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header>
+    <h1>Allgemeine Fakten über Icons in HTML</h1>
+    <p>Grundlagen, Einsatzgebiete und Arten von Icons in der Webentwicklung.</p>
+  </header>
+
+  <main>
+    <section class="content">
+      <h2>Was sind Icons?</h2>
+      <p>Icons sind kleine grafische Symbole, die Informationen visuell darstellen. Sie helfen dabei, Inhalte schnell zu erfassen und Benutzeroberflächen intuitiver zu gestalten.</p>
+
+      <h2>Warum Icons verwenden?</h2>
+      <ul>
+        <li>Verbessern die Benutzerfreundlichkeit</li>
+        <li>Ersetzen oder ergänzen Textinhalte</li>
+        <li>Sind sprachunabhängig und universell verständlich</li>
+        <li>Sehen professionell und modern aus</li>
+      </ul>
+
+      <h2>Wie werden Icons in HTML eingebunden?</h2>
+      <p>Icons können auf drei Arten eingebunden werden:</p>
+      <ol>
+        <li><strong>Per Icon-Font</strong> – z.B. Font Awesome, Bootstrap Icons</li>
+        <li><strong>Als SVG</strong> – vektorbasierte, skalierbare Grafiken</li>
+        <li><strong>Als PNG/JPG</strong> – klassische Bildformate (weniger flexibel)</li>
+      </ol>
+
+      <h2>Unterschied zwischen Icon-Font und SVG</h2>
+      <p><strong>Icon-Fonts</strong> funktionieren wie Schriftarten. Icons werden per CSS skaliert, gefärbt, gedreht. <strong>SVG-Icons</strong> sind präziser und bieten mehr Gestaltungsmöglichkeiten, z. B. für Animation oder Farbverläufe.</p>
+
+      <h2>Barrierefreiheit</h2>
+      <p>Icons sollten mit einem alternativen Text oder einem zugänglichen HTML-Attribut versehen werden, um für Screenreader verständlich zu sein. Beispiel:</p>
+      <pre><code>&lt;i class="fas fa-search" aria-hidden="true"&gt;&lt;/i&gt;
+&lt;span class="sr-only"&gt;Suche&lt;/span&gt;</code></pre>
+    </section>
+  </main>
+
+  <footer>
+    <p>Zurück zur <a href="main.html" >Startseite</a></p>
+  </footer>
+</body>
+</html>

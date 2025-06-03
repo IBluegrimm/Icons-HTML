@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Icons in HTML</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  
+    <header>
+    <h1>Icons in der Programmiersprache HTML</h1>
+    <p>Erfahre mehr über verschiedene Icon-Bibliotheken und wie du sie in HTML einbindest.</p>
+  </header>
+
+  <nav class="mobile-nav">
+  <div class="nav-toggle" id="navToggle">☰</div>
+  <ul id="navMenu">
+    <li><a href="index.html" target="_blank">Startseite</a></li>
+    <li><a href="seiten/bootstrap-icons.html" target="_blank">Bootstrap Icons</a></li>
+    <li><a href="seiten/fontawesome-icons.html" target="_blank">Font Awesome</a></li>
+    <li><a href="seiten/material-icons.html" target="_blank">Material Icons</a></li>
+    <li><a href="seiten/ionicons.html" target="_blank">Ionicons</a></li>
+    <li><a href="seiten/icon-fakten.html" target="_blank">Allgemeine Fakten</a></li>
+  </ul>
+</nav>
+
+  <main>
+    <div class="card-container">
+      <a href="more_icons.html" target="_blank" class="card">
+        <h2>Facts about Icons</h2>
+        <p>Allgemeine Fakten zu den anwendbaren Icons in HTML</p>
+      </a>
+      <a href="fontawesome.html" target="_blank" class="card">
+        <h2>Font Awesome</h2>
+        <p>Die bekannteste Icon-Bibliothek für Webprojekte.</p>
+      </a>
+      <a href="bootstrap.html" target="_blank" class="card">
+        <h2>Bootstrap Icons</h2>
+        <p>Icons speziell für Bootstrap, aber überall einsetzbar.</p>
+      </a>
+      <a href="material_icons.html" target="_blank" class="card">
+        <h2>Material Icons</h2>
+        <p>Googles Designsprache für Icons.</p>
+      </a>
+      <a href="more_icons.html" target="_blank" class="card">
+        <h2>More Icon-Sets</h2>
+        <p>Eine Auswahl weiterer nützlicher Icon-Bibliotheken.</p>
+      </a>
+    </div>
+  </main>
+  
+  <section class="content" id="bewertung">
+  <h2>Seite bewerten</h2>
+  <div class="bewertung-icons">
+    <button id="thumbsUp" title="Gefällt mir 👍">👍</button>
+    <button id="thumbsDown" title="Gefällt mir nicht 👎">👎</button>
+  </div>
+
+  <div id="bewertung-antwort" class="hidden">
+    <!-- Inhalte werden per JS eingefügt -->
+  </div>
+</section>
+
+  <footer>
+    <p>© 2025 – Icons in HTML | Erstellt mit Liebe 💜💙</p>
+  </footer>
+  
+  <script>
+document.getElementById('thumbsUp').addEventListener('click', () => {
+  const antwort = document.getElementById('bewertung-antwort');
+  antwort.innerHTML = `
+    <p>Danke für dein positives Feedback! ⭐</p>
+    <div class="sterne">
+      <span data-wert="1">★</span>
+      <span data-wert="2">★</span>
+      <span data-wert="3">★</span>
+      <span data-wert="4">★</span>
+      <span data-wert="5">★</span>
+    </div>
+    <textarea placeholder="Was hat dir besonders gut gefallen?"></textarea>
+  `;
+  antwort.classList.remove('hidden');
+  const sterne = antwort.querySelectorAll('.sterne span');
+  sterne.forEach(star => {
+    star.addEventListener('click', () => {
+      const wert = star.dataset.wert;
+      sterne.forEach(s => s.classList.remove('aktiv'));
+      for (let i = 0; i < wert; i++) {
+        sterne[i].classList.add('aktiv');
+      }
+    });
+  });
+});
+
+document.getElementById('thumbsDown').addEventListener('click', () => {
+  const antwort = document.getElementById('bewertung-antwort');
+  antwort.innerHTML = `<p>Schade aber auch beim nächsten Mal wird es besser.</p>`;
+  antwort.classList.remove('hidden');
+});
+</script>
+
+<script>
+  const toggle = document.getElementById("navToggle");
+  const menu = document.getElementById("navMenu");
+
+  toggle.addEventListener("click", () => {
+    menu.classList.toggle("show");
+  });
+</script>
+
+</body>
+</html>

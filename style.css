@@ -1,0 +1,241 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: "Segoe UI", sans-serif;
+  background: linear-gradient(135deg, #6a11cb, #2575fc);
+  color: #fff;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+header {
+  text-align: center;
+  padding: 3rem 1rem 2rem;
+}
+header h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+.card-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  padding: 2rem;
+  width: 100%;
+  max-width: 1000px;
+}
+.card {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 1rem;
+  padding: 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.2s, background 0.3s;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.2);
+}
+.card h2 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+}
+.card p {
+  font-size: 1rem;
+  opacity: 0.85;
+}
+footer {
+  text-align: center;
+  margin-top: auto;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+}
+.content {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+}
+.content h2 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+}
+.content p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+pre {
+  background: rgba(0, 0, 0, 0.2);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+
+code {
+  font-family: monospace;
+  color: #fff;
+}
+.content {
+  max-width: 900px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 1rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+}
+.content h2 {
+  margin-top: 2rem;
+  font-size: 1.6rem;
+  color: #ffffff;
+}
+.content p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+  color: #f0f0f0;
+}
+pre {
+  background: rgba(0, 0, 0, 0.25);
+  padding: 1rem;
+  border-radius: 0.5rem;
+  overflow-x: auto;
+  margin-top: 0.5rem;
+}
+code {
+  font-family: Consolas, monospace;
+  color: #cfcfcf;
+  font-size: 0.95rem;
+}
+a {
+  color: #b3d4fc;
+  text-decoration: underline;
+}
+a:hover {
+  color: #fff;
+}
+footer {
+  text-align: center;
+  margin-top: 3rem;
+  padding: 1rem;
+  font-size: 0.9rem;
+  opacity: 0.8;
+  color: #ffffff;
+}
+#bewertung {
+  text-align: center;
+  margin-top: 3rem;
+}
+.bewertung-icons button {
+  font-size: 2rem;
+  margin: 0 1rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+.bewertung-icons button:hover {
+  transform: scale(1.2);
+}
+#bewertung-antwort {
+  margin-top: 1.5rem;
+  background: rgba(255, 255, 255, 0.08);
+  padding: 1rem;
+  border-radius: 1rem;
+  backdrop-filter: blur(6px);
+  color: white;
+}
+.hidden {
+  display: none;
+}
+.sterne {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+.sterne span {
+  font-size: 2rem;
+  cursor: pointer;
+  color: #cccccc;
+}
+.sterne span.aktiv {
+  color: gold;
+}
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 0.5rem;
+  border: none;
+  font-family: inherit;
+  resize: vertical;
+  margin-top: 0.5rem;
+}
+.mobile-nav {
+  background: linear-gradient(to right, #6a00ff, #3b00b3);
+  color: white;
+  padding: 0.5rem 1rem;
+  position: relative;
+}
+.nav-toggle {
+  font-size: 1.8rem;
+  cursor: pointer;
+  display: none;
+  user-select: none;
+}
+.mobile-nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+.mobile-nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+@media (max-width: 768px) {
+  .nav-toggle {
+    display: block;
+  }
+  .mobile-nav ul {
+    display: none;
+    flex-direction: column;
+    background: rgba(0, 0, 0, 0.8);
+    margin-top: 0.5rem;
+    border-radius: 0.5rem;
+    padding: 1rem;
+  }
+  .mobile-nav ul.show {
+    display: flex;
+  }
+  .mobile-nav ul li {
+    margin: 0.5rem 0;
+  }
+}
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 1.5rem;
+  }
+  .content {
+    padding: 1rem;
+  }
+  textarea {
+    font-size: 1rem;
+  }
+}
